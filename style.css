@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  margin: 24px;
+}
+
 .game-container {
-  height: 560px;
-  width: 560px;
-  background-color: red;
+  height: 562px;
+  width: 562px;
+  border: black solid 1px;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
 }
