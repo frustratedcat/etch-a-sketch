@@ -1,12 +1,18 @@
 "use strict";
 
-let btnSizeContainer = document.querySelectorAll(".btn-size-container");
+const btnSizeContainer = document.querySelector(".btn-size-container");
+let btnBoardSize = document.querySelectorAll(".btn-board-size");
 const btn16 = document.querySelector(".btn-16");
 const btn32 = document.querySelector(".btn-32");
 const btn48 = document.querySelector(".btn-48");
 const clearBoard = document.querySelector(".clear-board");
 
 const gameContainer = document.querySelector(".game-container");
+
+const clickHoverContainer = document.querySelector(".click-hover-container");
+let btnDraw = document.querySelectorAll(".btn-draw");
+const drawOnClick = document.querySelector(".draw-on-click");
+const drawOnHover = document.querySelector(".draw-on-hover");
 
 const createGrid16 = function () {
   for (let i = 0; i < 16 * 16; i++) {
@@ -48,8 +54,8 @@ const createGrid48 = function () {
 };
 
 const createGrid = function () {
-  for (let i = 0; i < btnSizeContainer.length; i++) {
-    btnSizeContainer[i].addEventListener("click", (e) => {
+  for (let i = 0; i < btnBoardSize.length; i++) {
+    btnBoardSize[i].addEventListener("click", (e) => {
       if (e.target.matches(".btn-16")) {
         removeGameContainerChildren();
         createGrid16();
