@@ -8,4 +8,6 @@
   height: 560px;
   width: 560px;
   background-color: red;
+  display: flex;
+  flex-wrap: wrap;
 }
