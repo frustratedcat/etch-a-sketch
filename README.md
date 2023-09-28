@@ -1,3 +1,3 @@
 # etch-a-sketch
 
-An web-based etch-a-sketch.
+A web-based etch-a-sketch.
