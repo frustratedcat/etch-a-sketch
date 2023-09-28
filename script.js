@@ -16,6 +16,8 @@ const drawOnClick = document.querySelector(".draw-on-click");
 const drawOnHover = document.querySelector(".draw-on-hover");
 const erase = document.querySelector(".erase");
 
+const div = document.querySelector("div");
+
 const createGrid16 = function () {
   for (let i = 0; i < 16 * 16; i++) {
     const squares = document.createElement("div");
@@ -86,18 +88,26 @@ const drawCreationOnClick = function () {
   gameContainer.addEventListener("click", (e) => {
     if (e.target.matches(".squares")) {
       const changeColor = e.target;
-      changeColor.classList.add("change-color");
+      changeColor.classList.add("change-color-click");
     }
   });
 };
 
-const drawCreationOnHover = function () {};
+const drawCreationOnHover = function () {
+  gameContainer.addEventListener("mouseover", (e) => {
+    if (e.target.matches(".squares")) {
+      const changeColor = e.target;
+      changeColor.classList.add("change-color-hover");
+    }
+  });
+};
 
 const eraseCreationOnClick = function () {
   gameContainer.addEventListener("click", (e) => {
     if (e.target.matches(".squares")) {
       const changeColor = e.target;
-      changeColor.classList.remove("change-color");
+      changeColor.classList.remove("change-color-click");
+      changeColor.classList.remove("change-color-hover");
     }
   });
 };
@@ -106,12 +116,10 @@ const drawMethod = function () {
   for (let i = 0; i < btnDraw.length; i++) {
     btnDraw[i].addEventListener("click", (e) => {
       if (e.target.matches(".draw-on-click")) {
-        console.log("click");
         drawCreationOnClick();
       } else if (e.target.matches(".draw-on-hover")) {
-        console.log("hover");
+        drawCreationOnHover();
       } else if (e.target.matches(".erase")) {
-        console.log("erase");
         eraseCreationOnClick();
       }
     });

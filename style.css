@@ -16,9 +16,10 @@
   background-color: white;
 }
 
-.change-color {
+.change-color-click {
   background-color: blue;
 }
 
-.hover-color {
+.change-color-hover {
+  background-color: red;
 }
