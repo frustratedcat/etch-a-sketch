@@ -8,11 +8,13 @@ const btn48 = document.querySelector(".btn-48");
 const clearBoard = document.querySelector(".clear-board");
 
 const gameContainer = document.querySelector(".game-container");
+let gameContainerAll = document.querySelectorAll(".game-contianer");
 
 const clickHoverContainer = document.querySelector(".click-hover-container");
 let btnDraw = document.querySelectorAll(".btn-draw");
 const drawOnClick = document.querySelector(".draw-on-click");
 const drawOnHover = document.querySelector(".draw-on-hover");
+const erase = document.querySelector(".erase");
 
 const createGrid16 = function () {
   for (let i = 0; i < 16 * 16; i++) {
@@ -20,7 +22,7 @@ const createGrid16 = function () {
     squares.classList.add("squares");
     squares.setAttribute(
       "style",
-      "background-color: blue; width: 35px; height: 35px; border: 0.1px solid white;"
+      "width: 35px; height: 35px; border: 0.1px solid black;"
     );
 
     gameContainer.appendChild(squares);
@@ -33,7 +35,7 @@ const createGrid32 = function () {
     squares.classList.add("squares");
     squares.setAttribute(
       "style",
-      "background-color: blue; width: 17.5px; height: 17.5px; border: 0.1px solid white;"
+      "white; width: 17.5px; height: 17.5px; border: 0.1px solid black;"
     );
 
     gameContainer.appendChild(squares);
@@ -46,7 +48,7 @@ const createGrid48 = function () {
     squares.classList.add("squares");
     squares.setAttribute(
       "style",
-      "background-color: blue; width: 11.67px; height: 11.667px; border: 0.1px solid white;"
+      "width: 11.67px; height: 11.667px; border: 0.1px solid black;"
     );
 
     gameContainer.appendChild(squares);
@@ -80,4 +82,41 @@ function removeGameContainerChildren() {
   }
 }
 
+const drawCreationOnClick = function () {
+  gameContainer.addEventListener("click", (e) => {
+    if (e.target.matches(".squares")) {
+      const changeColor = e.target;
+      changeColor.classList.add("change-color");
+    }
+  });
+};
+
+const drawCreationOnHover = function () {};
+
+const eraseCreationOnClick = function () {
+  gameContainer.addEventListener("click", (e) => {
+    if (e.target.matches(".squares")) {
+      const changeColor = e.target;
+      changeColor.classList.remove("change-color");
+    }
+  });
+};
+
+const drawMethod = function () {
+  for (let i = 0; i < btnDraw.length; i++) {
+    btnDraw[i].addEventListener("click", (e) => {
+      if (e.target.matches(".draw-on-click")) {
+        console.log("click");
+        drawCreationOnClick();
+      } else if (e.target.matches(".draw-on-hover")) {
+        console.log("hover");
+      } else if (e.target.matches(".erase")) {
+        console.log("erase");
+        eraseCreationOnClick();
+      }
+    });
+  }
+};
+
 createGrid();
+drawMethod();

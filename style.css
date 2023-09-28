@@ -11,3 +11,14 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.squares {
+  background-color: white;
+}
+
+.change-color {
+  background-color: blue;
+}
+
+.hover-color {
+}
