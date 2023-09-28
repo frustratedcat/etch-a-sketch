@@ -88,7 +88,8 @@ const drawCreationOnClick = function () {
   gameContainer.addEventListener("click", (e) => {
     if (e.target.matches(".squares")) {
       const changeColor = e.target;
-      changeColor.classList.add("change-color-click");
+      changeColor.classList.toggle("change-color-click");
+      changeColor.classList.remove("change-color-hover");
     }
   });
 };
@@ -97,7 +98,7 @@ const drawCreationOnHover = function () {
   gameContainer.addEventListener("mouseover", (e) => {
     if (e.target.matches(".squares")) {
       const changeColor = e.target;
-      changeColor.classList.add("change-color-hover");
+      changeColor.classList.toggle("change-color-hover");
     }
   });
 };
