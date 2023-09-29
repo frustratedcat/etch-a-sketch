@@ -40,7 +40,7 @@ const createGrid32 = function () {
     squares.classList.add("squares");
     squares.setAttribute(
       "style",
-      "white; width: 17.5px; height: 17.5px; border: 0.1px solid black;"
+      "width: 17.5px; height: 17.5px; border: 0.1px solid black;"
     );
 
     gameContainer.appendChild(squares);
@@ -130,5 +130,21 @@ const drawMethod = function () {
   }
 };
 
+const getRandomNumber = function (min = 0, max = 255) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  const result = Math.floor(Math.random() * (max - min + 1) + min);
+  return result;
+};
+
+const getRandomColors = function () {
+  let result = [];
+  for (let i = 0; i < 3; i++) {
+    result.push(getRandomNumber());
+    console.log(result);
+  }
+};
+
+getRandomColors();
 createGrid();
 drawMethod();
