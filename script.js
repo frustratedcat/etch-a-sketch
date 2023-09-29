@@ -16,7 +16,10 @@ const drawOnClick = document.querySelector(".draw-on-click");
 const drawOnHover = document.querySelector(".draw-on-hover");
 const erase = document.querySelector(".erase");
 
-const div = document.querySelector("div");
+const colorContainer = document.querySelector(".color-container");
+let color = document.querySelectorAll(".color");
+const blackWhiteColor = document.querySelector(".black-white-color");
+const randomColor = document.querySelector(".random-color");
 
 const createGrid16 = function () {
   for (let i = 0; i < 16 * 16; i++) {
