@@ -27,5 +27,23 @@ body {
 }
 
 .change-color-hover {
-  background-color: black;
+  background-color: blue;
+}
+
+.change-color-16 {
+  width: 35px;
+  height: 35px;
+  border: 0.1px solid black;
+}
+
+.change-color-32 {
+  width: 17.5px;
+  height: 17.5px;
+  border: 0.1px solid black;
+}
+
+.change-color-48 {
+  width: 11.67px;
+  height: 11.67px;
+  border: 0.1px solid black;
 }
