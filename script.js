@@ -22,6 +22,9 @@ const blackWhiteColor = document.querySelector(".black-white-color");
 const randomColor = document.querySelector(".random-color");
 
 let numberOfSquares;
+let changeColor;
+let randomColorShow = false;
+let blackWhiteShow = false;
 
 const createGrid16 = function () {
   for (let i = 0; i < 16 * 16; i++) {
@@ -91,9 +94,12 @@ function removeGameContainerChildren() {
 }
 
 const drawCreationOnClick = function () {
+  chooseColor();
   gameContainer.addEventListener("click", (e) => {
     if (e.target.matches(".squares")) {
-      const changeColor = e.target;
+      changeColor = e.target;
+
+      shownColor();
 
       changeColor.classList.remove("change-color-hover");
 
@@ -114,7 +120,7 @@ const drawCreationOnClick = function () {
 const drawCreationOnHover = function () {
   gameContainer.addEventListener("mouseover", (e) => {
     if (e.target.matches(".squares")) {
-      const changeColor = e.target;
+      changeColor = e.target;
 
       changeColor.classList.remove("change-color-click");
 
@@ -135,7 +141,7 @@ const drawCreationOnHover = function () {
 const eraseCreationOnClick = function () {
   gameContainer.addEventListener("click", (e) => {
     if (e.target.matches(".squares")) {
-      const changeColor = e.target;
+      changeColor = e.target;
       changeColor.classList.remove("change-color-click");
       changeColor.classList.remove("change-color-hover");
     }
@@ -175,24 +181,41 @@ const getRandomColors = function () {
   return rgbResult;
 };
 
+function shownColor() {
+  if (randomColorShow === true) {
+    let randomColor = getRandomColors();
+    console.log(randomColor);
+    changeColor.setAttribute("style", `background-color: ${randomColor};`);
+  } else if (blackWhiteShow === true) {
+    let colorBlack = "RGB(0, 0, 0)";
+    console.log(colorBlack);
+    changeColor.setAttribute("style", `background-color: ${colorBlack};`);
+  }
+}
+
 function chooseColor() {
-  let randomColor;
   for (let i = 0; i < color.length; i++) {
     color[i].addEventListener("click", (e) => {
       if (e.target.matches(".random-color")) {
-        randomColor = getRandomColors();
-        console.log(randomColor);
-        changeColorClick.setAttribute(
-          "style",
-          `background-color: ${randomColor}`
+        randomColorShow = true;
+        if (blackWhiteShow === true) {
+          blackWhiteShow = false;
+        }
+        console.log(
+          `random color: ${randomColorShow}, black white: ${blackWhiteShow}`
         );
       } else if (e.target.matches(".black-white-color")) {
-        console.log("RGB(0, 0, 0)");
+        blackWhiteShow = true;
+        if (randomColorShow === true) {
+          randomColorShow = false;
+        }
+        console.log(
+          `random color: ${randomColorShow}, black white: ${blackWhiteShow}`
+        );
       }
     });
   }
 }
 
-chooseColor();
 createGrid();
 drawMethod();
