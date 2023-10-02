@@ -239,17 +239,9 @@ function chooseColor() {
   }
 }
 
-createGrid();
-drawMethod();
+const playGame = function () {
+  createGrid();
+  drawMethod();
+};
 
-for (let i = 0; i < btnDraw.length; i++) {
-  btnDraw[i].addEventListener("click", () => {
-    console.log(
-      drawOnClickButtonClicked,
-      drawOnHoverButtonClicked,
-      eraseOnClickButtonClicked,
-      randomColorShow,
-      blackWhiteShow
-    );
-  });
-}
+playGame();
