@@ -21,6 +21,9 @@ let color = document.querySelectorAll(".color");
 const blackWhiteColor = document.querySelector(".black-white-color");
 const randomColor = document.querySelector(".random-color");
 
+let drawOnClickButtonClicked = false;
+let drawOnHoverButtonClicked = false;
+let eraseOnClickButtonClicked = false;
 let numberOfSquares;
 let changeColor;
 let randomColorShow = false;
@@ -30,10 +33,7 @@ const createGrid16 = function () {
   for (let i = 0; i < 16 * 16; i++) {
     const squares = document.createElement("div");
     squares.classList.add("squares");
-    squares.setAttribute(
-      "style",
-      "width: 35px; height: 35px; border: 0.1px solid black;"
-    );
+    squares.classList.add("squares-16");
     gameContainer.appendChild(squares);
   }
 };
@@ -42,10 +42,7 @@ const createGrid32 = function () {
   for (let i = 0; i < 32 * 32; i++) {
     const squares = document.createElement("div");
     squares.classList.add("squares");
-    squares.setAttribute(
-      "style",
-      "width: 17.5px; height: 17.5px; border: 0.1px solid black;"
-    );
+    squares.classList.add("squares-32");
     gameContainer.appendChild(squares);
   }
 };
@@ -54,10 +51,7 @@ const createGrid48 = function () {
   for (let i = 0; i < 48 * 48; i++) {
     const squares = document.createElement("div");
     squares.classList.add("squares");
-    squares.setAttribute(
-      "style",
-      "width: 11.67px; height: 11.667px; border: 0.1px solid black;"
-    );
+    squares.classList.add("squares-48");
     gameContainer.appendChild(squares);
   }
 };
@@ -99,40 +93,59 @@ const drawCreationOnClick = function () {
     if (e.target.matches(".squares")) {
       changeColor = e.target;
 
-      shownColor();
-
-      changeColor.classList.remove("change-color-hover");
-
-      if (numberOfSquares === 16) {
-        changeColor.classList.add("change-color-16");
-        changeColor.classList.toggle("change-color-click");
-      } else if (numberOfSquares === 32) {
-        changeColor.classList.add("change-color-32");
-        changeColor.classList.toggle("change-color-click");
-      } else if (numberOfSquares === 48) {
-        changeColor.classList.add("change-color-48");
-        changeColor.classList.toggle("change-color-click");
+      if (numberOfSquares === 16 && drawOnClickButtonClicked === true) {
+        changeColor.classList.add("change-color-click");
+        if (randomColorShow === true || blackWhiteShow === true) {
+          shownColor();
+        }
+        changeColor.classList.remove("change-color-hover");
+        changeColor.classList.remove("erase-color");
+      } else if (numberOfSquares === 32 && drawOnClickButtonClicked === true) {
+        changeColor.classList.add("change-color-click");
+        if (randomColorShow === true || blackWhiteShow === true) {
+          shownColor();
+        }
+        changeColor.classList.remove("change-color-hover");
+        changeColor.classList.remove("erase-color");
+      } else if (numberOfSquares === 48 && drawOnClickButtonClicked === true) {
+        changeColor.classList.add("change-color-click");
+        if (randomColorShow === true || blackWhiteShow === true) {
+          shownColor();
+        }
+        changeColor.classList.remove("change-color-hover");
+        changeColor.classList.remove("erase-color");
       }
     }
   });
 };
 
 const drawCreationOnHover = function () {
+  chooseColor();
   gameContainer.addEventListener("mouseover", (e) => {
     if (e.target.matches(".squares")) {
       changeColor = e.target;
 
-      changeColor.classList.remove("change-color-click");
-
-      if (numberOfSquares === 16) {
-        changeColor.classList.add("change-color-16");
-        changeColor.classList.toggle("change-color-hover");
-      } else if (numberOfSquares === 32) {
-        changeColor.classList.add("change-color-32");
-        changeColor.classList.toggle("change-color-hover");
-      } else if (numberOfSquares === 48) {
-        changeColor.classList.add("change-color-48");
-        changeColor.classList.toggle("change-color-hover");
+      if (numberOfSquares === 16 && drawOnHoverButtonClicked === true) {
+        changeColor.classList.add("change-color-hover");
+        if (randomColorShow === true || blackWhiteShow === true) {
+          shownColor();
+        }
+        changeColor.classList.remove("change-color-click");
+        changeColor.classList.remove("erase-color");
+      } else if (numberOfSquares === 32 && drawOnHoverButtonClicked === true) {
+        changeColor.classList.add("change-color-hover");
+        if (randomColorShow === true || blackWhiteShow === true) {
+          shownColor();
+        }
+        changeColor.classList.remove("change-color-click");
+        changeColor.classList.remove("erase-color");
+      } else if (numberOfSquares === 48 && drawOnHoverButtonClicked === true) {
+        changeColor.classList.add("change-color-hover");
+        if (randomColorShow === true || blackWhiteShow === true) {
+          shownColor();
+        }
+        changeColor.classList.remove("change-color-click");
+        changeColor.classList.remove("erase-color");
       }
     }
   });
@@ -144,6 +157,8 @@ const eraseCreationOnClick = function () {
       changeColor = e.target;
       changeColor.classList.remove("change-color-click");
       changeColor.classList.remove("change-color-hover");
+      changeColor.classList.add("erase-color");
+      changeColor.removeAttribute("style", "background-color");
     }
   });
 };
@@ -153,10 +168,21 @@ const drawMethod = function () {
     btnDraw[i].addEventListener("click", (e) => {
       if (e.target.matches(".draw-on-click")) {
         drawCreationOnClick();
+        drawOnClickButtonClicked = true;
+        drawOnHoverButtonClicked = false;
+        eraseOnClickButtonClicked = false;
       } else if (e.target.matches(".draw-on-hover")) {
         drawCreationOnHover();
+        drawOnClickButtonClicked = false;
+        drawOnHoverButtonClicked = true;
+        eraseOnClickButtonClicked = false;
       } else if (e.target.matches(".erase")) {
         eraseCreationOnClick();
+        drawOnClickButtonClicked = false;
+        drawOnHoverButtonClicked = false;
+        eraseOnClickButtonClicked = true;
+        randomColorShow = false;
+        blackWhiteShow = false;
       }
     });
   }
@@ -184,11 +210,9 @@ const getRandomColors = function () {
 function shownColor() {
   if (randomColorShow === true) {
     let randomColor = getRandomColors();
-    console.log(randomColor);
     changeColor.setAttribute("style", `background-color: ${randomColor};`);
   } else if (blackWhiteShow === true) {
     let colorBlack = "RGB(0, 0, 0)";
-    console.log(colorBlack);
     changeColor.setAttribute("style", `background-color: ${colorBlack};`);
   }
 }
@@ -196,22 +220,20 @@ function shownColor() {
 function chooseColor() {
   for (let i = 0; i < color.length; i++) {
     color[i].addEventListener("click", (e) => {
-      if (e.target.matches(".random-color")) {
-        randomColorShow = true;
-        if (blackWhiteShow === true) {
+      if (
+        drawOnClickButtonClicked === true ||
+        drawOnHoverButtonClicked === true
+      ) {
+        if (e.target.matches(".random-color")) {
+          randomColorShow = true;
           blackWhiteShow = false;
-        }
-        console.log(
-          `random color: ${randomColorShow}, black white: ${blackWhiteShow}`
-        );
-      } else if (e.target.matches(".black-white-color")) {
-        blackWhiteShow = true;
-        if (randomColorShow === true) {
+        } else if (e.target.matches(".black-white-color")) {
+          blackWhiteShow = true;
           randomColorShow = false;
         }
-        console.log(
-          `random color: ${randomColorShow}, black white: ${blackWhiteShow}`
-        );
+      } else {
+        randomColorShow = false;
+        blackWhiteShow = false;
       }
     });
   }
@@ -219,3 +241,15 @@ function chooseColor() {
 
 createGrid();
 drawMethod();
+
+for (let i = 0; i < btnDraw.length; i++) {
+  btnDraw[i].addEventListener("click", () => {
+    console.log(
+      drawOnClickButtonClicked,
+      drawOnHoverButtonClicked,
+      eraseOnClickButtonClicked,
+      randomColorShow,
+      blackWhiteShow
+    );
+  });
+}
