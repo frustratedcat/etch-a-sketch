@@ -5,9 +5,24 @@
 }
 
 body {
-  width: 800px;
+  width: 850px;
   margin: auto;
   font-family: "Pixelify Sans", serif;
+  background-image: linear-gradient(
+    to right bottom,
+    #ff6b6b,
+    #f06595,
+    #cc5de8,
+    #845ef7,
+    #5c7cfa,
+    #339af0,
+    #22b8cf,
+    #20c997,
+    #51cf66,
+    #94d82d,
+    #fcc419,
+    #ff922b
+  );
 }
 
 .header-footer {
@@ -16,6 +31,18 @@ body {
   align-items: center;
   text-align: center;
   margin: 24px;
+}
+
+.header-h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.footer {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .flex-container {
@@ -28,10 +55,27 @@ body {
 .game-container {
   height: 562px;
   width: 562px;
-  border: black solid 1px;
+  border: lightblue solid 1px;
+  border-radius: 15px;
+  overflow: hidden;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  font-family: inherit;
+  height: 50px;
+  width: 100px;
+  border: 2px solid rgb(20, 172, 223);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 0 5px;
+  background-color: white;
+  color: rgb(20, 172, 223);
 }
 
 .squares {
@@ -41,43 +85,29 @@ body {
 .squares-16 {
   width: 35px;
   height: 35px;
-  border: 0.1px solid black;
+  border: 0.1px solid lightblue;
 }
 
 .squares-32 {
   width: 17.5px;
   height: 17.5px;
-  border: 0.1px solid black;
+  border: 0.1px solid lightblue;
 }
 
 .squares-48 {
   width: 11.67px;
   height: 11.67px;
-  border: 0.1px solid black;
+  border: 0.1px solid lightblue;
 }
 
 .change-color-click {
-  background-color: black;
+  background-color: lightblue;
 }
 
 .change-color-hover {
-  background-color: black;
+  background-color: lightblue;
 }
 
 .erase-color {
   background-color: white;
-}
-
-.btn {
-  font-size: 18px;
-  text-align: center;
-  font-family: inherit;
-  height: 50px;
-  width: 100px;
-  border: 1px solid rgb(20, 172, 223);
-  border-radius: 10px;
-  margin: 10px;
-  padding: 0 5px;
-  background-color: rgb(20, 172, 223);
-  color: white;
 }
