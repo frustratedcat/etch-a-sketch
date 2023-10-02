@@ -82,14 +82,14 @@ body {
 .btn:focus {
   color: #f06595;
   border: 2px solid #f06595;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .btn:active {
   background-color: #f06595;
   color: white;
   border: 2px solid white;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .squares {
