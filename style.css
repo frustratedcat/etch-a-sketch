@@ -55,7 +55,7 @@ body {
 .game-container {
   height: 562px;
   width: 562px;
-  border: lightblue solid 1px;
+  border: #4dabf7 solid 1px;
   border-radius: 15px;
   overflow: hidden;
   background-color: white;
@@ -70,12 +70,26 @@ body {
   font-family: inherit;
   height: 50px;
   width: 100px;
-  border: 2px solid rgb(20, 172, 223);
+  border: 2px solid #4dabf7;
   border-radius: 10px;
   margin: 10px;
   padding: 0 5px;
   background-color: white;
-  color: rgb(20, 172, 223);
+  color: #4dabf7;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #f06595;
+  border: 2px solid #f06595;
+  transition: 0.5s;
+}
+
+.btn:active {
+  background-color: #f06595;
+  color: white;
+  border: 2px solid white;
+  transition: 0.5s;
 }
 
 .squares {
@@ -85,27 +99,27 @@ body {
 .squares-16 {
   width: 35px;
   height: 35px;
-  border: 0.1px solid lightblue;
+  border: 0.1px solid #4dabf7;
 }
 
 .squares-32 {
   width: 17.5px;
   height: 17.5px;
-  border: 0.1px solid lightblue;
+  border: 0.1px solid #4dabf7;
 }
 
 .squares-48 {
   width: 11.67px;
   height: 11.67px;
-  border: 0.1px solid lightblue;
+  border: 0.1px solid #4dabf7;
 }
 
 .change-color-click {
-  background-color: lightblue;
+  background-color: #4dabf7;
 }
 
 .change-color-hover {
-  background-color: lightblue;
+  background-color: #4dabf7;
 }
 
 .erase-color {
