@@ -5,8 +5,26 @@
 }
 
 body {
+  width: 800px;
+  margin: auto;
+}
+
+.header-footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: 24px;
+}
+
+.header-h1 {
+}
+
+.flex-container {
+  margin: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-container {
