@@ -66,3 +66,15 @@ body {
 .erase-color {
   background-color: white;
 }
+
+.btn {
+  text-align: center;
+  height: 40px;
+  width: 80px;
+  border: 1px solid rgb(20, 172, 223);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgb(20, 172, 223);
+  color: white;
+}
