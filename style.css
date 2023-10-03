@@ -64,6 +64,10 @@ body {
   flex-wrap: wrap;
 }
 
+.click-hover-container {
+  margin-bottom: 42px;
+}
+
 .btn {
   font-size: 18px;
   font-weight: 600;
@@ -91,6 +95,14 @@ body {
   color: white;
   border: 2px solid white;
   transition: 0.4s;
+}
+
+.svg-container {
+  margin: 10px;
+}
+
+.color-svg {
+  display: none;
 }
 
 .squares {
