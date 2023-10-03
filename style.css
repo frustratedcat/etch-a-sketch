@@ -6,6 +6,7 @@
 
 body {
   width: 850px;
+  min-height: 100%;
   margin: auto;
   font-family: "Pixelify Sans", serif;
   background-image: linear-gradient(
