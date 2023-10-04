@@ -29,6 +29,22 @@ let changeColor;
 let randomColorShow = false;
 let blackWhiteShow = false;
 
+let outerColorChoice = document.querySelectorAll(".outer-color-choice");
+const choiceGray = document.getElementById("choice-gray");
+const choiceBrown = document.getElementById("choice-brown");
+const choiceOrange = document.getElementById("choice-orange");
+const choiceYellow = document.getElementById("choice-yellow");
+const choiceLime = document.getElementById("choice-lime");
+const choiceGreen = document.getElementById("choice-green");
+const choiceTeal = document.getElementById("choice-teal");
+const choiceCyan = document.getElementById("choice-cyan");
+const choiceBlue = document.getElementById("choice-blue");
+const choiceIndigo = document.getElementById("choice-indigo");
+const choiceViolet = document.getElementById("choice-violet");
+const choiceGrape = document.getElementById("choice-grape");
+const choicePink = document.getElementById("choice-pink");
+const choiceRed = document.getElementById("choice-red");
+
 const createGrid16 = function () {
   for (let i = 0; i < 16 * 16; i++) {
     const squares = document.createElement("div");
@@ -206,6 +222,18 @@ const getRandomColors = function () {
   }
   return rgbResult;
 };
+
+function colorOptionChoice() {
+  for (let i = 0; i < outerColorChoice.length; i++) {
+    outerColorChoice[i].addEventListener("click", (e) => {
+      if (e.target.matches(".outer-color-choice")) {
+        console.log(e.target.classList);
+      }
+    });
+  }
+}
+
+colorOptionChoice();
 
 function shownColor() {
   if (randomColorShow === true) {
