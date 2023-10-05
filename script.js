@@ -305,6 +305,162 @@ function colorChoiceRed() {
   colorFill10.setAttribute("style", "fill: #c92a2a");
 }
 
+function colorChoicePink() {
+  colorFill1.setAttribute("style", "fill: #fff0f6");
+  colorFill2.setAttribute("style", "fill: #ffdeeb");
+  colorFill3.setAttribute("style", "fill: #fcc2d7");
+  colorFill4.setAttribute("style", "fill: #faa2c1");
+  colorFill5.setAttribute("style", "fill: #f783ac");
+  colorFill6.setAttribute("style", "fill: #f06595");
+  colorFill7.setAttribute("style", "fill: #e64980");
+  colorFill8.setAttribute("style", "fill: #d6336c");
+  colorFill9.setAttribute("style", "fill: #c2255c");
+  colorFill10.setAttribute("style", "fill: #a61e4d");
+}
+
+function colorChoiceGrape() {
+  colorFill1.setAttribute("style", "fill: #f8f0fc");
+  colorFill2.setAttribute("style", "fill: #f3d9fa");
+  colorFill3.setAttribute("style", "fill: #eebefa");
+  colorFill4.setAttribute("style", "fill: #e599f7");
+  colorFill5.setAttribute("style", "fill: #da77f2");
+  colorFill6.setAttribute("style", "fill: #cc5de8");
+  colorFill7.setAttribute("style", "fill: #be4bdb");
+  colorFill8.setAttribute("style", "fill: #ae3ec9");
+  colorFill9.setAttribute("style", "fill: #9c36b5");
+  colorFill10.setAttribute("style", "fill: #862e9c");
+}
+
+function colorChoiceViolet() {
+  colorFill1.setAttribute("style", "fill: #f3f0ff");
+  colorFill2.setAttribute("style", "fill: #e5dbff");
+  colorFill3.setAttribute("style", "fill: #d0bfff");
+  colorFill4.setAttribute("style", "fill: #b197fc");
+  colorFill5.setAttribute("style", "fill: #9775fa");
+  colorFill6.setAttribute("style", "fill: #845ef7");
+  colorFill7.setAttribute("style", "fill: #7950f2");
+  colorFill8.setAttribute("style", "fill: #7048e8");
+  colorFill9.setAttribute("style", "fill: #6741d9");
+  colorFill10.setAttribute("style", "fill: #5f3dc4");
+}
+
+function colorChoiceIndigo() {
+  colorFill1.setAttribute("style", "fill: #edf2ff");
+  colorFill2.setAttribute("style", "fill: #dbe4ff");
+  colorFill3.setAttribute("style", "fill: #bac8ff");
+  colorFill4.setAttribute("style", "fill: #91a7ff");
+  colorFill5.setAttribute("style", "fill: #748ffc");
+  colorFill6.setAttribute("style", "fill: #5c7cfa");
+  colorFill7.setAttribute("style", "fill: #4c6ef5");
+  colorFill8.setAttribute("style", "fill: #4263eb");
+  colorFill9.setAttribute("style", "fill: #3b5bdb");
+  colorFill10.setAttribute("style", "fill: #364fc7");
+}
+
+function colorChoiceBlue() {
+  colorFill1.setAttribute("style", "fill: #e7f5ff");
+  colorFill2.setAttribute("style", "fill: #d0ebff");
+  colorFill3.setAttribute("style", "fill: #a5d8ff");
+  colorFill4.setAttribute("style", "fill: #74c0fc");
+  colorFill5.setAttribute("style", "fill: #4dabf7");
+  colorFill6.setAttribute("style", "fill: #339af0");
+  colorFill7.setAttribute("style", "fill: #228be6");
+  colorFill8.setAttribute("style", "fill: #1c7ed6");
+  colorFill9.setAttribute("style", "fill: #1971c2");
+  colorFill10.setAttribute("style", "fill: #1864ab");
+}
+
+function colorChoiceCyan() {
+  colorFill1.setAttribute("style", "fill: #e3fafc");
+  colorFill2.setAttribute("style", "fill: #c5f6fa");
+  colorFill3.setAttribute("style", "fill: #99e9f2");
+  colorFill4.setAttribute("style", "fill: #66d9e8");
+  colorFill5.setAttribute("style", "fill: #3bc9db");
+  colorFill6.setAttribute("style", "fill: #22b8cf");
+  colorFill7.setAttribute("style", "fill: #15aabf");
+  colorFill8.setAttribute("style", "fill: #1098ad");
+  colorFill9.setAttribute("style", "fill: #0c8599");
+  colorFill10.setAttribute("style", "fill: #0b7285");
+}
+
+function colorChoiceTeal() {
+  colorFill1.setAttribute("style", "fill: #e6fcf5");
+  colorFill2.setAttribute("style", "fill: #c3fae8");
+  colorFill3.setAttribute("style", "fill: #96f2d7");
+  colorFill4.setAttribute("style", "fill: #63e6be");
+  colorFill5.setAttribute("style", "fill: #38d9a9");
+  colorFill6.setAttribute("style", "fill: #20c997");
+  colorFill7.setAttribute("style", "fill: #12b886");
+  colorFill8.setAttribute("style", "fill: #0ca678");
+  colorFill9.setAttribute("style", "fill: #099268");
+  colorFill10.setAttribute("style", "fill: #087f5b");
+}
+
+function colorChoiceGreen() {
+  colorFill1.setAttribute("style", "fill: #ebfbee");
+  colorFill2.setAttribute("style", "fill: #d3f9d8");
+  colorFill3.setAttribute("style", "fill: #b2f2bb");
+  colorFill4.setAttribute("style", "fill: #8ce99a");
+  colorFill5.setAttribute("style", "fill: #69db7c");
+  colorFill6.setAttribute("style", "fill: #51cf66");
+  colorFill7.setAttribute("style", "fill: #40c057");
+  colorFill8.setAttribute("style", "fill: #37b24d");
+  colorFill9.setAttribute("style", "fill: #2f9e44");
+  colorFill10.setAttribute("style", "fill: #2b8a3e");
+}
+
+function colorChoiceLime() {
+  colorFill1.setAttribute("style", "fill: #f4fce3");
+  colorFill2.setAttribute("style", "fill: #e9fac8");
+  colorFill3.setAttribute("style", "fill: #d8f5a2");
+  colorFill4.setAttribute("style", "fill: #c0eb75");
+  colorFill5.setAttribute("style", "fill: #a9e34b");
+  colorFill6.setAttribute("style", "fill: #94d82d");
+  colorFill7.setAttribute("style", "fill: #82c91e");
+  colorFill8.setAttribute("style", "fill: #74b816");
+  colorFill9.setAttribute("style", "fill: #66a80f");
+  colorFill10.setAttribute("style", "fill: #5c940d");
+}
+
+function colorChoiceYellow() {
+  colorFill1.setAttribute("style", "fill: #fff9db");
+  colorFill2.setAttribute("style", "fill: #fff3bf");
+  colorFill3.setAttribute("style", "fill: #ffec99");
+  colorFill4.setAttribute("style", "fill: #ffe066");
+  colorFill5.setAttribute("style", "fill: #ffd43b");
+  colorFill6.setAttribute("style", "fill: #fcc419");
+  colorFill7.setAttribute("style", "fill: #fab005");
+  colorFill8.setAttribute("style", "fill: #f59f00");
+  colorFill9.setAttribute("style", "fill: #f08c00");
+  colorFill10.setAttribute("style", "fill: #e67700");
+}
+
+function colorChoiceOrange() {
+  colorFill1.setAttribute("style", "fill: #fff4e6");
+  colorFill2.setAttribute("style", "fill: #ffe8cc");
+  colorFill3.setAttribute("style", "fill: #ffd8a8");
+  colorFill4.setAttribute("style", "fill: #ffc078");
+  colorFill5.setAttribute("style", "fill: #ffa94d");
+  colorFill6.setAttribute("style", "fill: #ff922b");
+  colorFill7.setAttribute("style", "fill: #fd7e14");
+  colorFill8.setAttribute("style", "fill: #f76707");
+  colorFill9.setAttribute("style", "fill: #e8590c");
+  colorFill10.setAttribute("style", "fill: #d9480f");
+}
+
+function colorChoiceBrown() {
+  colorFill1.setAttribute("style", "fill: #FFEDD7");
+  colorFill2.setAttribute("style", "fill: #F5E2CC");
+  colorFill3.setAttribute("style", "fill: #F1DEC9");
+  colorFill4.setAttribute("style", "fill: #C8B6A6");
+  colorFill5.setAttribute("style", "fill: #A4907C");
+  colorFill6.setAttribute("style", "fill: #8D7B68");
+  colorFill7.setAttribute("style", "fill: #A77979");
+  colorFill8.setAttribute("style", "fill: #704F4F");
+  colorFill9.setAttribute("style", "fill: #553939");
+  colorFill10.setAttribute("style", "fill: #472D2D");
+}
+
 function colorOptionChosen() {
   colorOptionChoice();
   for (let i = 0; i < outerColorChoice.length; i++) {
@@ -320,28 +476,40 @@ function colorOptionChosen() {
         colorChoiceRed();
       } else if (outerChoice === "choice-pink") {
         console.log("pink");
+        colorChoicePink();
       } else if (outerChoice === "choice-grape") {
         console.log("grape");
+        colorChoiceGrape();
       } else if (outerChoice === "choice-violet") {
         console.log("violet");
+        colorChoiceViolet();
       } else if (outerChoice === "choice-indigo") {
         console.log("indigo");
+        colorChoiceIndigo();
       } else if (outerChoice === "choice-blue") {
         console.log("blue");
+        colorChoiceBlue();
       } else if (outerChoice === "choice-cyan") {
         console.log("cyan");
+        colorChoiceCyan();
       } else if (outerChoice === "choice-teal") {
         console.log("teal");
+        colorChoiceTeal();
       } else if (outerChoice === "choice-green") {
         console.log("green");
+        colorChoiceGreen();
       } else if (outerChoice === "choice-lime") {
         console.log("lime");
+        colorChoiceLime();
       } else if (outerChoice === "choice-yellow") {
         console.log("yellow");
+        colorChoiceYellow();
       } else if (outerChoice === "choice-orange") {
         console.log("orange");
+        colorChoiceOrange();
       } else if (outerChoice === "choice-brown") {
         console.log("brown");
+        colorChoiceBrown();
       }
     });
   }
