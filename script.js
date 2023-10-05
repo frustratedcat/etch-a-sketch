@@ -273,7 +273,6 @@ function colorOptionChoice() {
     outerColorChoice[i].addEventListener("click", (e) => {
       if (e.target.matches(".outer-color-choice")) {
         outerChoice = e.target.classList[1];
-        console.log(outerChoice);
       }
     });
   }
@@ -469,46 +468,32 @@ function colorOptionChosen() {
       colorSVG.classList.remove("color-svg");
 
       if (outerChoice === "choice-gray") {
-        console.log("gray");
         colorChoiceGray();
       } else if (outerChoice === "choice-red") {
-        console.log("red");
         colorChoiceRed();
       } else if (outerChoice === "choice-pink") {
-        console.log("pink");
         colorChoicePink();
       } else if (outerChoice === "choice-grape") {
-        console.log("grape");
         colorChoiceGrape();
       } else if (outerChoice === "choice-violet") {
-        console.log("violet");
         colorChoiceViolet();
       } else if (outerChoice === "choice-indigo") {
-        console.log("indigo");
         colorChoiceIndigo();
       } else if (outerChoice === "choice-blue") {
-        console.log("blue");
         colorChoiceBlue();
       } else if (outerChoice === "choice-cyan") {
-        console.log("cyan");
         colorChoiceCyan();
       } else if (outerChoice === "choice-teal") {
-        console.log("teal");
         colorChoiceTeal();
       } else if (outerChoice === "choice-green") {
-        console.log("green");
         colorChoiceGreen();
       } else if (outerChoice === "choice-lime") {
-        console.log("lime");
         colorChoiceLime();
       } else if (outerChoice === "choice-yellow") {
-        console.log("yellow");
         colorChoiceYellow();
       } else if (outerChoice === "choice-orange") {
-        console.log("orange");
         colorChoiceOrange();
       } else if (outerChoice === "choice-brown") {
-        console.log("brown");
         colorChoiceBrown();
       }
     });
@@ -520,48 +505,37 @@ function innerColorChosen() {
   for (let i = 0; i < colorful.length; i++) {
     colorful[i].addEventListener("click", (e) => {
       innerChoice = e.target.classList;
-      console.log(innerChoice);
 
       if (innerChoice.contains("color-fill-1")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-2")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-3")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-4")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-5")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-6")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-7")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-8")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-9")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("color-fill-10")) {
         innerChosenColor = e.target.style.fill;
         innerColorChoiceFinal = true;
-        console.log(innerChosenColor);
       } else if (innerChoice.contains("go-back")) {
         outerColorChoiceAll.setAttribute("style", "display: content;");
         colorSVG.classList.add("color-svg");
@@ -571,27 +545,15 @@ function innerColorChosen() {
   }
 }
 
-// innerColorChosen();
-
 function shownColor() {
-  //log here for testing
-  console.log(
-    `random2: ${randomColorShow}, black2: ${blackWhiteShow}, svg2: ${svgShow}`
-  );
   if (randomColorShow === true) {
     let randomColor = getRandomColors();
-    //for testing
-    console.log(randomColor);
     changeColor.setAttribute("style", `background-color: ${randomColor};`);
   } else if (blackWhiteShow === true) {
     let colorBlack = "RGB(0, 0, 0)";
-    // for testing
-    console.log(colorBlack);
     changeColor.setAttribute("style", `background-color: ${colorBlack};`);
   } else if (svgShow === true && innerColorChoiceFinal === true) {
     let svgColor = innerChosenColor;
-    //for testing
-    console.log(`svgColor = ${svgColor}`);
     changeColor.setAttribute("style", `background-color: ${svgColor}`);
   }
 }
@@ -609,28 +571,16 @@ function chooseColor() {
           svgShow = false;
           outerColorChoiceAll.setAttribute("style", "display: content;");
           colorSVG.classList.add("color-svg");
-          //for testing
-          console.log(
-            `random: ${randomColorShow}, black: ${blackWhiteShow}, svg: ${svgShow}`
-          );
         } else if (e.target.matches(".black-white-color")) {
           blackWhiteShow = true;
           randomColorShow = false;
           svgShow = false;
           outerColorChoiceAll.setAttribute("style", "display: content;");
           colorSVG.classList.add("color-svg");
-          //for testing
-          console.log(
-            `random: ${randomColorShow}, black: ${blackWhiteShow}, svg: ${svgShow}`
-          );
         } else if (e.target.matches(".outer-color-choice")) {
           blackWhiteShow = false;
           randomColorShow = false;
           svgShow = true;
-          //for testing
-          console.log(
-            `random: ${randomColorShow}, black: ${blackWhiteShow}, svg: ${svgShow}`
-          );
           if (svgShow === true) {
             innerColorChosen();
           }
