@@ -1,5 +1,6 @@
 :root {
-  --primary-blue: #4dabf7;
+  --primary-blue: #1971c2;
+  --secondary-blue: #4dabf7;
   --primary-background: #ffffff;
   --primary-focus: #f06595;
   --default-color: #000000;
@@ -119,19 +120,19 @@ body {
 .squares-16 {
   width: 35px;
   height: 35px;
-  border: 0.1px solid var(--primary-blue);
+  border: 0.1px solid var(--secondary-blue);
 }
 
 .squares-32 {
   width: 17.5px;
   height: 17.5px;
-  border: 0.1px solid var(--primary-blue);
+  border: 0.1px solid var(--secondary-blue);
 }
 
 .squares-48 {
   width: 11.67px;
   height: 11.67px;
-  border: 0.1px solid var(--primary-blue);
+  border: 0.1px solid var(--secondary-blue);
 }
 
 .change-color-click {
