@@ -1,3 +1,10 @@
+:root {
+  --primary-blue: #4dabf7;
+  --primary-background: #ffffff;
+  --primary-focus: #f06595;
+  --default-color: #000000;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -35,13 +42,13 @@ body {
 }
 
 .header-h1 {
-  color: white;
+  color: var(--primary-background);
   font-size: 40px;
   font-weight: 700;
 }
 
 .footer {
-  color: white;
+  color: var(--primary-background);
   font-size: 20px;
   font-weight: 500;
 }
@@ -56,10 +63,10 @@ body {
 .game-container {
   height: 562px;
   width: 562px;
-  border: #4dabf7 solid 1px;
+  border: var(--primary-blue) solid 1px;
   border-radius: 15px;
   overflow: hidden;
-  background-color: white;
+  background-color: var(--primary-background);
   display: flex;
   flex-wrap: wrap;
 }
@@ -75,25 +82,25 @@ body {
   font-family: inherit;
   height: 50px;
   width: 100px;
-  border: 2px solid #4dabf7;
+  border: 2px solid var(--primary-blue);
   border-radius: 10px;
   margin: 10px;
   padding: 0 5px;
-  background-color: white;
-  color: #4dabf7;
+  background-color: var(--primary-background);
+  color: var(--primary-blue);
 }
 
 .btn:hover,
 .btn:focus {
-  color: #f06595;
-  border: 2px solid #f06595;
+  color: var(--primary-focus);
+  border: 2px solid var(--primary-focus);
   transition: 0.4s;
 }
 
 .btn:active {
-  background-color: #f06595;
-  color: white;
-  border: 2px solid white;
+  background-color: var(--primary-focus);
+  color: var(--primary-background);
+  border: 2px solid var(--primary-background);
   transition: 0.4s;
 }
 
@@ -106,35 +113,35 @@ body {
 }
 
 .squares {
-  background-color: white;
+  background-color: var(--primary-background);
 }
 
 .squares-16 {
   width: 35px;
   height: 35px;
-  border: 0.1px solid #4dabf7;
+  border: 0.1px solid var(--primary-blue);
 }
 
 .squares-32 {
   width: 17.5px;
   height: 17.5px;
-  border: 0.1px solid #4dabf7;
+  border: 0.1px solid var(--primary-blue);
 }
 
 .squares-48 {
   width: 11.67px;
   height: 11.67px;
-  border: 0.1px solid #4dabf7;
+  border: 0.1px solid var(--primary-blue);
 }
 
 .change-color-click {
-  background-color: black;
+  background-color: var(--default-color);
 }
 
 .change-color-hover {
-  background-color: black;
+  background-color: var(--default-color);
 }
 
 .erase-color {
-  background-color: white;
+  background-color: var(--primary-background);
 }
