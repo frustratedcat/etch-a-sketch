@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   width: 850px;
   min-height: 100%;
@@ -34,24 +38,18 @@ body {
   );
 }
 
-.header-footer {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 24px;
 }
 
 .header-h1 {
   color: var(--primary-background);
   font-size: 40px;
   font-weight: 700;
-}
-
-.footer {
-  color: var(--primary-background);
-  font-size: 20px;
-  font-weight: 500;
+  margin-top: 10px;
 }
 
 .flex-container {
